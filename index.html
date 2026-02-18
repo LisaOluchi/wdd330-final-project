@@ -1,16 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WDD330 Final Project</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodWave — Feel. Discover. Flow.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
 
-  <h1>CTA Event Registration</h1>
-  <p>Project setup is working 🎉</p>
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-icon" aria-hidden="true">♪</span>
+        <span class="logo-text">MoodWave</span>
+      </div>
+      <button id="favoritesBtn" class="favorites-btn" aria-label="View saved favorites">
+        <span aria-hidden="true">♥</span>
+        <span id="favCount" class="fav-count">0</span>
+      </button>
+    </header>
 
-  <script type="module" src="/src/js/main.js"></script>
-</body>
+    <main>
+
+      <!-- SCREEN 1: MOOD SELECTION -->
+      <section id="moodScreen" class="screen active">
+        <div class="hero-text">
+          <h1>How are you <em>feeling</em> right now?</h1>
+          <p>Pick your mood and we'll find something just for you.</p>
+        </div>
+        <div class="mood-grid" id="moodGrid" role="group" aria-label="Mood selection"></div>
+      </section>
+
+      <!-- SCREEN 2: RESULTS -->
+      <section id="resultsScreen" class="screen">
+        <div class="results-header">
+          <button id="backBtn" class="back-btn">← Change Mood</button>
+          <div id="moodBadge" class="mood-badge"></div>
+        </div>
+
+        <!-- Quote -->
+        <div class="content-block">
+          <h2 class="block-label">Words for your soul</h2>
+          <div class="quote-card" id="quoteCard">
+            <div class="loading-state" id="quoteLoading">
+              <div class="spinner"></div>
+              <p>Finding the perfect words...</p>
+            </div>
+            <div id="quoteContent" hidden>
+              <span class="quote-mark" aria-hidden="true">"</span>
+              <blockquote id="quoteText"></blockquote>
+              <cite id="quoteAuthor"></cite>
+              <div class="card-actions">
+                <button id="saveQuoteBtn" class="btn-save">♥ Save</button>
+                <button id="refreshQuoteBtn" class="btn-refresh">↺ New Quote</button>
+              </div>
+            </div>
+            <div id="quoteError" class="error-state" hidden>
+              <p>⚠️ Couldn't load quote. <button id="retryQuoteBtn" class="retry-btn">Try again</button></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Music -->
+        <div class="content-block">
+          <h2 class="block-label">Music for your moment</h2>
+          <div class="music-card" id="musicCard">
+            <div class="loading-state" id="musicLoading">
+              <div class="spinner"></div>
+              <p>Curating your playlist...</p>
+            </div>
+            <div id="tracksList" hidden></div>
+            <div id="musicError" class="error-state" hidden>
+              <p>⚠️ Couldn't load music. <button id="retryMusicBtn" class="retry-btn">Try again</button></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 3: FAVORITES -->
+      <section id="favoritesScreen" class="screen">
+        <div class="results-header">
+          <button id="closeFavBtn" class="back-btn">← Back</button>
+          <h2 class="fav-title">Your Favorites</h2>
+        </div>
+        <div id="favoritesList"></div>
+        <div id="emptyFavorites" class="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">♡</span>
+          <p>No favorites saved yet.</p>
+          <p class="empty-sub">Save quotes and songs you love!</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Toast -->
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
 </html>
+
 

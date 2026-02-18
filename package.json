@@ -1,7 +1,7 @@
 {
-  "name": "wdd330-final-project",
-  "private": true,
-  "version": "0.0.0",
+  "name": "moodwave",
+  "version": "1.0.0",
+  "description": "Mood-based music and quotes web app",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,6 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.3.1"
+    "vite": "^5.0.0"
   }
 }
