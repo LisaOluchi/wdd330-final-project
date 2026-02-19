@@ -29,7 +29,7 @@ export async function fetchQuote(tag) {
 
 const ITUNES_API = 'https://itunes.apple.com/search';
 
-constFALLBACK_TRACKS = [
+const FALLBACK_TRACKS = [
     { id: 1, title: 'Weightless', artist: 'Marconi Union', album: 'Weightless', cover: '', preview: '', duration: 479 },
     { id: 2, title: 'Clair de Lune', artist: 'Claude Debussy', album: 'Piano Works', cover: '', preview: '', duration: 302 },
     { id: 3, title: 'River Flows in You', artist: 'Yiruma', album: 'First Love', cover: '', preview: '', duration: 214 },
