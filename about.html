@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About MoodWave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-icon">♪</span>
+        <span class="logo-text">MoodWave</span>
+      </div>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="about-page">
+      <section class="about-hero">
+        <h1>About <em>MoodWave</em></h1>
+        <p class="lead">
+          Music has always been a powerful emotional tool. Whether it’s helping us through difficult
+          days or amplifying moments of joy, it connects deeply with how we feel. MoodWave was
+          created to make that connection intentional — transforming music from background noise
+          into a source of emotional support and clarity.
+        </p>
+      </section>
+
+      <!-- Mission Section -->
+      <section class="mission-section">
+        <h2>Why We Built MoodWave</h2>
+        <div class="mission-grid">
+          <div class="mission-card">
+            <span class="mission-icon">🎵</span>
+            <h3>Music Heals</h3>
+            <p>
+              Research shows music reduces stress by 61% and improves mood instantly. We bring that
+              power to your fingertips.
+            </p>
+          </div>
+          <div class="mission-card">
+            <span class="mission-icon">💭</span>
+            <h3>Words Matter</h3>
+            <p>
+              The right quote at the right moment can shift your entire perspective. We match wisdom
+              to your emotions.
+            </p>
+          </div>
+          <div class="mission-card">
+            <span class="mission-icon">🧘</span>
+            <h3>Self-Care Made Simple</h3>
+            <p>
+              Mental wellness shouldn't be complicated. Pick a mood, find your vibe, feel better.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps-grid">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>Choose Your Mood</h3>
+            <p>Feeling happy, anxious, tired? We have 8 moods tailored to your emotional state.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Get Personalized Content</h3>
+            <p>We curate quotes and music that match exactly how you're feeling right now.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Save Your Favorites</h3>
+            <p>Found something you love? Save it to your personal collection for later.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter-cta">
+        <div class="cta-content">
+          <h2>Join Our Community</h2>
+          <p>
+            Get exclusive playlists, curated quotes, and study packages delivered to your inbox.
+          </p>
+          <p class="perk">
+            ✨ <strong>Premium Members</strong> get personalized mood tracking & custom playlists!
+          </p>
+
+          <form id="newsletterForm" class="newsletter-form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required />
+              <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email" required />
+              <span class="error" id="emailError"></span>
+            </div>
+            <button type="submit" class="submit-btn">Subscribe Now</button>
+          </form>
+
+          <div id="successMsg" class="success-message" hidden>
+            <span class="success-icon">✓</span>
+            <p>Welcome! Check your email for confirmation.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 MoodWave. Built with ❤️ for emotional wellness.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#" id="darkModeToggle">🌙 Dark Mode</a>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script type="module" src="/src/js/about.js"></script>
+  </body>
+</html>

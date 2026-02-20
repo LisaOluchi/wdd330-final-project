@@ -90,7 +90,9 @@ export function renderTracks(tracks) {
       </div>
     `;
     if (track.preview) {
-      item.querySelector('.btn-play').addEventListener('click', (e) => _togglePlay(track, e.currentTarget));
+      item
+        .querySelector('.btn-play')
+        .addEventListener('click', (e) => _togglePlay(track, e.currentTarget));
     }
     item.querySelector('.btn-track-save').addEventListener('click', (e) => {
       if (saveFavorite({ type: 'track', data: track })) {
@@ -192,4 +194,3 @@ function _esc(str) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 }
-

@@ -13,7 +13,7 @@ export function getFavorites() {
 export function saveFavorite(item) {
   const favs = getFavorites();
   const isDuplicate = favs.some(
-    (f) => f.type === item.type && JSON.stringify(f.data) === JSON.stringify(item.data)
+    (f) => f.type === item.type && JSON.stringify(f.data) === JSON.stringify(item.data),
   );
   if (isDuplicate) return false;
   favs.unshift({ ...item, savedAt: Date.now() });
@@ -30,4 +30,3 @@ export function removeFavorite(index) {
 export function getFavoritesCount() {
   return getFavorites().length;
 }
-

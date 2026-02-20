@@ -10,4 +10,3 @@ export function showToast(message, duration = 2800) {
   toast.classList.add('show');
   _timer = setTimeout(() => toast.classList.remove('show'), duration);
 }
-
